@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+		<style type="text/css">
+		</style>
+	</head>
+	<body onLoad="aaa();">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js">
+	</script>
+	<script type="text/javascript" src="table.js">
+	</script>
+	<script language="javascript" type="text/javascript">
+	
+		function aaa()
+		{
+			var show,table,table_tr,table_td,text,link;
+			var test=new tableFun();
+			table_tr=7;
+			table_td=3;
+			text=["各大網站","常用","yahoo","google","Facebook","用過","wikipedia","沒看過","AAA","BBB","CCC"];
+			link=["","","http://www.yahoo.com.tw","http://www.google.com","http://www.facebook.com","","http://zh.wikipedia.org/zh-tw/","",
+			"http://www.AAA.com.tw","http://www.BBB.com.tw","http://www.CCC.com.tw"];
+			show = document.getElementById("show");
+			show.appendChild(test.create_table(table_tr,table_td));
+			test.create_span(0,0,7,table_tr,table_td,"rowSpan");
+			test.create_span(0,1,3,table_tr,table_td,"rowSpan");
+			test.create_span(4,1,3,table_tr,table_td,"rowSpan");
+			test.create_text(text,true,link);
+		}
+
+		
+	</script>
+		<div id="show">
+		</div>
+	</body>
+</html>
